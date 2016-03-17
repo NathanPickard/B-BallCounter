@@ -8,7 +8,8 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -23,10 +24,10 @@
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:padding="16dp"
-                android:text="--"
+                android:text="Team One"
                 android:inputType="textCapWords"
                 android:textColor="#616161"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:id="@+id/teamOneTextView"/>
 
             <TextView
@@ -38,11 +39,11 @@
                 android:paddingBottom="24dp"
                 android:text="0"
                 android:textColor="#000000"
-                android:textSize="56sp"/>
+                android:textSize="65sp"/>
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
@@ -51,7 +52,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
@@ -60,7 +61,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
@@ -89,10 +90,10 @@
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:padding="16dp"
-                android:text="--"
+                android:text="Team Two"
                 android:inputType="textCapWords"
                 android:textColor="#616161"
-                android:textSize="16sp"
+                android:textSize="18sp"
                 android:id="@+id/teamTwoTextView"/>
 
             <TextView
@@ -104,11 +105,11 @@
                 android:paddingBottom="24dp"
                 android:text="0"
                 android:textColor="#000000"
-                android:textSize="56sp"/>
+                android:textSize="65sp"/>
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
@@ -117,7 +118,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
@@ -126,7 +127,7 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="55dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
@@ -139,12 +140,23 @@
 
     <Button
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
         android:onClick="resetScore"
-        android:text="Reset"/>
+        android:text="Reset"
+        android:id="@+id/restButton"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/basketballIcon"
+        android:src="@drawable/black"
+        android:layout_below="@+id/linearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/restButton"
+        android:layout_margin="30dp"/>
 </RelativeLayout>
