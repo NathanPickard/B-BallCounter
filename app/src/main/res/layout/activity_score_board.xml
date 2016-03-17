@@ -6,10 +6,10 @@
 
     <LinearLayout
 
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:id="@+id/linearLayout">
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -19,16 +19,16 @@
             tools:context=".MainActivity">
 
             <TextView
+                android:id="@+id/teamOneTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
+                android:inputType="textCapWords"
                 android:padding="16dp"
                 android:text="Team One"
-                android:inputType="textCapWords"
                 android:textColor="#616161"
-                android:textSize="18sp"
-                android:id="@+id/teamOneTextView"/>
+                android:textSize="16sp"/>
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -85,16 +85,16 @@
             tools:context=".MainActivity">
 
             <TextView
+                android:id="@+id/teamTwoTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
+                android:inputType="textCapWords"
                 android:padding="16dp"
                 android:text="Team Two"
-                android:inputType="textCapWords"
                 android:textColor="#616161"
-                android:textSize="18sp"
-                android:id="@+id/teamTwoTextView"/>
+                android:textSize="16sp"/>
 
             <TextView
                 android:id="@+id/team_b_score"
@@ -139,6 +139,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/restButton"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
@@ -147,16 +148,15 @@
         android:layout_marginLeft="22dp"
         android:layout_marginRight="22dp"
         android:onClick="resetScore"
-        android:text="Reset"
-        android:id="@+id/restButton"/>
+        android:text="Reset"/>
 
     <ImageView
+        android:id="@+id/basketballIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/basketballIcon"
-        android:src="@drawable/black"
+        android:layout_above="@+id/restButton"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/restButton"
-        android:layout_margin="30dp"/>
+        android:layout_margin="30dp"
+        android:src="@drawable/black"/>
 </RelativeLayout>
