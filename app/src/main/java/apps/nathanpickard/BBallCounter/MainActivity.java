@@ -1,13 +1,22 @@
 package apps.nathanpickard.BBallCounter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    private EditText mTeamOneEditText;
+    private EditText mTeamTwoEditText;
+    private Button mStartButton;
+    private Button mSkipButton;
+
     //Tracks the score for Team A
     int scoreTeamA = 0;
     //Tracks the score for Team B
@@ -16,8 +25,40 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_team_entry);
+
+        mTeamOneEditText = (EditText) findViewById(R.id.teamOneEditText);
+        mTeamTwoEditText = (EditText) findViewById(R.id.teamTwoEditText);
+        mStartButton = (Button) findViewById(R.id.startButton);
+        mSkipButton = (Button) findViewById(R.id.skipButton);
+
+        mStartButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String teamOneName = mTeamOneEditText.getText().toString();
+                String teamTwoName = mTeamTwoEditText.getText().toString();
+                startGame(teamOneName, teamTwoName);
+            }
+        });
+
+        mSkipButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String teamOneName = "Team 1";
+                String teamTwoName = "Team 2";
+                startGame(teamOneName, teamTwoName);
+            }
+        });
     }
+
+    private void startGame(String teamOneName, String teamTwoName) {
+        Intent intent = new Intent(this, ScoreBoardActivity.class);
+        intent.putExtra(getString(R.string.key_name_one), teamOneName);
+        intent.putExtra(getString(R.string.key_name_two), teamTwoName);
+        startActivity(intent);
+    }
+
+
 
     /*
     @Override

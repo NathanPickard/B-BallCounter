@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">B-Ball Counter</string>
     <string name="action_settings">Settings</string>
+    <string name="key_name_one">teamOne</string>
+    <string name="key_name_two">teamTwo</string>
+    <string name="title_activity_score">ScoreBoardActivity</string>
 </resources>

@@ -17,16 +17,17 @@
             android:orientation="vertical"
             tools:context=".MainActivity">
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:padding="16dp"
-                android:hint="Enter 'Team A' name"
+                android:text="--"
                 android:inputType="textCapWords"
                 android:textColor="#616161"
-                android:textSize="14sp"/>
+                android:textSize="16sp"
+                android:id="@+id/teamOneTextView"/>
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -82,16 +83,17 @@
             android:orientation="vertical"
             tools:context=".MainActivity">
 
-            <EditText
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center_horizontal"
                 android:padding="16dp"
-                android:hint="Enter 'Team B' name"
+                android:text="--"
                 android:inputType="textCapWords"
                 android:textColor="#616161"
-                android:textSize="14sp"/>
+                android:textSize="16sp"
+                android:id="@+id/teamTwoTextView"/>
 
             <TextView
                 android:id="@+id/team_b_score"
