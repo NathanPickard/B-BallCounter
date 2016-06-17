@@ -148,7 +148,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/restButton"
+        android:id="@+id/resetButton"
         android:layout_width="wrap_content"
         android:layout_height="55dp"
         android:layout_alignParentBottom="true"
@@ -163,7 +163,7 @@
         android:id="@+id/basketballIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/restButton"
+        android:layout_above="@+id/resetButton"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
         android:layout_margin="30dp"
