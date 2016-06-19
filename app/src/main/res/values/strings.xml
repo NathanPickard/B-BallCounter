@@ -5,4 +5,5 @@
     <string name="key_name_one">teamOne</string>
     <string name="key_name_two">teamTwo</string>
     <string name="title_activity_score">ScoreBoardActivity</string>
+    <string name="action_load_game">Load Game</string>
 </resources>
